@@ -86,7 +86,9 @@ while read -r branch; do
     # Get last commit before cutoff date
     COMMIT_HASH=$(git rev-list -1 --before="$CUTOFF_DATE" "$branch")
     if [ -z "$COMMIT_HASH" ]; then
-        echo "No commit found before $CUTOFF_DATE for branch $branch"
+        echo "Branch $branch created after cutoff date, deleting it..."
+        git push origin --delete "$branch"
+        git branch -D "$branch"
         continue
     fi
 
