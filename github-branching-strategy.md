@@ -55,15 +55,15 @@ Code moves **strictly one direction**, version-locked. There are two flows: the 
  │   feature/*       │                                                          │  Cut release/dev/     │
  │   fix/sonar-*     │                                                          │   x.y.(z+1)           │
  │   fix/vapt-*      │                                                          └────────────▲──────────┘
- └──────────┬────────┘                                                                     │
+ └──────────┬────────┘                                                                       │
             │  PR + merge                                                                    │ after tagging
-            ▼                                                                                 │
+            ▼                                                                                │
  ┌───────────────────────┐  PR + merge   ┌───────────────────────┐  PR + merge   ┌───────────────────────┐
  │ release/dev/x.y.z     │ ───────────> │ release/uat/x.y.z       │ ───────────> │ release/demo/x.y.z    │
  │  (DEV pipeline)       │              │  (UAT pipeline)         │              │  (PROD/Demo pipeline) │
  └───────────────────────┘               └───────────────────────┘               └────────────┬──────────┘
-       tag: dev-x.y.z                          tag: uat-x.y.z                                  │
-                                                                                                  ▼
+       tag: dev-x.y.z                          tag: uat-x.y.z                                 │
+                                                                                              ▼
                                                                                         tag: demo-x.y.z
 ```
 
