@@ -49,7 +49,7 @@ Code moves **strictly one direction**, version-locked. There are two flows: the 
 
 ### **3.1 Forward promotion (normal flow)**
 
-```tex
+```html
    Work Branches                                                                       Next Cycle
  ┌───────────────────┐                                                          ┌───────────────────────┐
  │   feature/*       │                                                          │  Cut release/dev/     │
@@ -71,7 +71,7 @@ Same version number (x.y.z) carries through dev → uat → demo. Once `release/
 
 ### **3.2 Hotfix flow (prod-only emergency exception)**
 
-```tex
+```html
  ┌───────────────────────┐
  │ release/demo/x.y.z    │
  └────────────┬──────────┘
