@@ -1,7 +1,6 @@
 # GitHub Repository Truncator
 
-A shell script to **truncate commits and code changes** from multiple branches of a Git repository **after a specific cutoff date** and force-push the cleaned history to GitHub. Useful for cleaning sensitive data or freezing repo history.
-
+A shell script that, for each branch listed in an input file, **force-resets it to its last commit at or before a cutoff date** and force-pushes the result to GitHub. **Branches with no commits before the cutoff date are deleted entirely** (both locally and on the remote), not just trimmed.
 
 
 ## Prerequisites
